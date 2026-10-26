@@ -9,32 +9,35 @@
   <title>SORYN</title>
   <meta name="application-name" content="SORYN">
   <meta name="apple-mobile-web-app-title" content="SORYN">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="theme-color" content="#fafaf7">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-180.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
   <link rel="stylesheet" href="style.css">
+  <script src="go.js"></script>
 </head>
 <body>
+  <div class="going">
+    <img src="logo.png" alt="" width="72" height="72">
+    <p>SORYN をひらいています…</p>
+    <a href="https://claude.ai/artifact/CJvSWTnB9JkKLFFefg5f6g" rel="noopener noreferrer">進まないときはこちら</a>
+  </div>
   <main class="wrap">
     <img class="mark" src="logo.png" alt="SORYN のロゴ" width="112" height="112">
     <h1 class="name">SORYN<span class="reading">ソリン</span></h1>
     <p class="philosophy">異なる力を対等につなぎ、調和から価値を生み出す。</p>
 
     <a class="open" id="open" href="https://claude.ai/artifact/CJvSWTnB9JkKLFFefg5f6g" rel="noopener noreferrer">ひらく</a>
-    <p class="note" id="opening" hidden>SORYN をひらいています…</p>
+    <p class="note warn" id="webapp-note" hidden>「Webアプリ」として追加されています。iPhone では Safari とログインが別になるため、いったん削除し、追加するときに「Webアプリとして開く」をオフにしてください。</p>
 
     <section class="guide" id="guide">
       <h2>アプリのように使うには</h2>
       <ol>
-        <li><b>iPhone</b>：Safari の共有ボタン（□に↑）→「ホーム画面に追加」</li>
+        <li><b>iPhone</b>：Safari の共有ボタン（□に↑）→「ホーム画面に追加」。<b>「Webアプリとして開く」が表示されたらオフ</b>にして「追加」</li>
         <li><b>MacBook</b>：Safari のメニュー「ファイル」→「Dockに追加」</li>
       </ol>
-      <p class="small">追加したアイコンから開くと、そのまま SORYN の画面に進みます。記録を見るには claude.ai へのログインが必要です（見られるのは持ち主だけです）。</p>
+      <p class="small">追加したアイコンから開くと、いつもの Safari でそのまま SORYN の画面に進みます（claude.ai のログインもそのまま使えます）。見られるのは持ち主だけです。</p>
     </section>
   </main>
   <script src="app.js"></script>

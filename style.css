@@ -45,3 +45,13 @@ body {
 .guide li { margin: 4px 0; }
 .small { font-size: .8rem; color: var(--muted); margin: 10px 0 0; }
 [hidden] { display: none !important; }
+
+/* アイコンから開いたとき：案内は出さず「ひらいています…」だけ */
+.going { display: none; }
+html.go .wrap { display: none; }
+html.go .going {
+  min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+  color: var(--muted); font-size: .95rem; padding: 24px;
+}
+.going a { color: var(--accent); font-size: .85rem; }
+.warn { color: #8f5a00; max-width: 26em; font-size: .85rem; margin-top: 14px; }

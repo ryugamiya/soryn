@@ -1,10 +1,6 @@
-// ホーム画面・Dock のアイコンから開いたときは、そのまま SORYN の画面へ進む。
-// Safari で普通に開いたときは「ホーム画面に追加」できるよう、この入口ページを表示したままにする。
+// 「Webアプリ」としてホーム画面に追加された場合（iPhone では Safari とログイン状態が別になる）の案内。
 (function () {
   var standalone = window.navigator.standalone === true ||
     (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
-  if (!standalone) return;
-  document.getElementById('guide').hidden = true;
-  document.getElementById('opening').hidden = false;
-  location.replace(document.getElementById('open').href);
+  if (standalone) document.getElementById('webapp-note').hidden = false;
 })();
