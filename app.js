@@ -1,6 +1,1 @@
-// 「Webアプリ」としてホーム画面に追加された場合（iPhone では Safari とログイン状態が別になる）の案内。
-(function () {
-  var standalone = window.navigator.standalone === true ||
-    (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
-  if (standalone) document.getElementById('webapp-note').hidden = false;
-})();
+// 入口ページの補助。ホーム画面・Dock のアイコン（アプリ）から開いたときは go.js がすぐ SORYN の本番ページへ進むため、ここでは何もしない。
